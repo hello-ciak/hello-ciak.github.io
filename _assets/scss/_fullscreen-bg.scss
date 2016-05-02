@@ -1,0 +1,76 @@
+
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+  transition: all .2s ease;
+}
+
+.fullscreen-bg__gradient{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    &.bg-0{&:after{background: $bg0;}}
+    &.bg-1{&:after{background: $bg1;}}
+    &.bg-2{&:after{background: $bg2;}}
+    &.bg-3{&:after{background: $bg3;}} // http://uigradients.com/#MinnesotaVikings
+    &.bg-4{&:after{background: $bg4;}} // http://uigradients.com/#FreshTurboscent
+    &.bg-5{&:after{background: $bg5;}} // http://uigradients.com/#DanceToForget
+    &.bg-6{&:after{background: $bg6;}} // http://uigradients.com/#CalmDarya
+    &.bg-7{&:after{background: $bg7;}} // http://uigradients.com/#BackToEarth
+    &.bg-8{&:after{background: $bg8;}} // http://uigradients.com/#Ukraine
+    &.bg-9{&:after{background: $bg9;}} // http://uigradients.com/#EndlessRiver
+    &:after, &:before{
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+    &:after{
+
+      opacity: .8;
+      z-index: 1;
+    }
+    &:before{
+      background: #000;
+      opacity: .4;
+      z-index: 2;
+    }
+}
+
+.fullscreen-bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  .touchevents &{
+    display: none;
+  }
+}
+
+.dnone{
+  display: none;
+}
+
+
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 300%;
+    left: -100%;
+  }
+}

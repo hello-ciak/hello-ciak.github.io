@@ -1,0 +1,22 @@
+.cta{
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  padding: 15px 50px;
+  margin-top: 30px;
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.7);
+  border-radius: 6px;
+  font-size: 16px;
+  background: rgba(255,255,255,0);
+  transition: background .2s ease-out;
+  &:hover{
+    background: rgba(255,255,255,0.1);
+  }
+  b{
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 20px;
+  }
+}
