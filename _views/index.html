@@ -27,6 +27,10 @@
             <h1>
                 <img src="img/ciak-messenger.png" alt="" width="200" height="200">
             </h1>
+            <a href="https://www.messenger.com/t/557159617777562/" class="message-me">
+                <i></i>
+                Message Me
+            </a>
         </header>
 
         <section class="section">
@@ -38,6 +42,18 @@
 
 
     <script src="js/scripts.js"></script>
+
+    <script>
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) { return; }
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+  </script>
 
 </body>
 </html>

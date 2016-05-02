@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-html, body, .wrapper{
+html, body{
     height: 100%;
 }
 
@@ -21,12 +21,16 @@ body{
     }
 }
 
+.header, .section, .wrapper{
+    min-height: 100%;
+}
+
 .header{
-    height: 100%;
     padding: 10%;
     background: #fff;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     img{
         display: block;
@@ -35,10 +39,13 @@ body{
 
 .section{
     padding: 30px;
+    display: flex;
+    align-items: center;
 }
 
 .messages {
-    overflow: auto;
+    height: 430px;
+    overflow: hidden;
     padding: 1rem .9rem;
 }
 .bubble {
@@ -87,5 +94,31 @@ body{
         left: -.5rem;
         width: .5rem;
         height: .5rem;
+    }
+}
+
+.message-me{
+    color: #fff;
+    background: #0084ff;
+    text-decoration: none;
+    padding: 10px 12px;
+    border-radius: 5px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background .1s ease-out;
+    &:hover{
+        background: lighten(#0084ff, 7);
+    }
+    i{
+        background-image: url(https://www.facebook.com/rsrc.php/v2/yv/r/tJm6f7zIqr5.png);
+        background-position: 0 -21px;
+        background-size: 21px 42px;
+        background-repeat: no-repeat;
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        margin-right: 5px;
     }
 }
