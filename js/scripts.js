@@ -22,17 +22,16 @@ window.onload = function() {
     var hours =  date.getHours();
     var minutes =  date.getMinutes();
     var current = hours + (minutes * .01);
-    if (current >= 5 && current < 19) return 'Have a nice day';
-    if (current >= 19 && current < 22) return 'Have a nice evening';
-    if (current >= 22 || current < 5) return 'Have a good night';
+    if (current >= 5 && current < 16) return 'Buongiorno umano!';
+    if (current >= 16 && current < 24) return 'Buonasera umano!';
+    if (current >= 1 || current < 4) return 'Ehi, non è tardi?';
   }
 
   var messages = [
-    'Ehi ciao!',
-    'Io sono Ciak',
-    'sono un leone che ne sa a pacchi di cinema',
-    'so esattamente tutti gli orari di tutti i cinema del mondo',
     getCurrentTime(),
+    'Io sono Ciak',
+    'sono un leone<br> che ne sa a pacchi<br> di cinema.',
+    'So esattamente tutti gli orari<br> di tutti i cinema del mondo',
     'Ci sentiamo presto!',
     'Ciak'
   ]
