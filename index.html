@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300|Roboto+Slab:300" rel="stylesheet">
+
     <title>Hello Ciak</title>
 
     <meta property="og:url" content="">
@@ -22,38 +25,54 @@
 
 <body>
 
-    <div class="wrapper">
-        <header class="header">
-            <h1>
-                <img src="img/ciak-messenger.png" alt="" width="200" height="200">
-            </h1>
-            <a href="https://www.messenger.com/t/557159617777562/" class="message-me">
-                <i></i>
-                Message Me
+    <div class="wrapper  cont-canvas">
+        <header class="header" id="header">
+            <a href="http://www.ciak.space">
+                <h2>
+                    Hello Ciak
+                </h2>
+            </a>
+            <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M15.117 0H.883C.395 0 0 .395 0 .883v14.234c0 .488.395.883.883.883h7.663V9.804H6.46V7.39h2.086V5.607c0-2.066 1.262-3.19 3.106-3.19.883 0 1.642.064 1.863.094v2.16h-1.28c-1 0-1.195.476-1.195 1.176v1.54h2.39l-.31 2.416h-2.08V16h4.077c.488 0 .883-.395.883-.883V.883C16 .395 15.605 0 15.117 0" fill-rule="nonzero"/></svg>
             </a>
         </header>
-
         <section class="section">
-
-            <div class="messages"></div>
-
+            <div class="box-circle">
+                <h1>
+                    <img src="img/hello-ciak.png" alt="" width="100" height="100">
+                </h1>
+            </div>
+            <h3 class="day-text">
+            </h3>
+            <p>
+                Ohhh... nice to meat you, my dearrrr exquisite guest.<br>
+                <b>What a delicious surrrrprise!</b><br>
+                I’m <b>Ciak the lion</b>, predator of movies and theaterrrrs, only the best ones.<br>
+                If you wanna taste my abilities just <b>send me your position</b><br>
+                using <b>Messenger</b> or <b>Telegram</b>... <b>at your own rrrrisk</b>.
+            </p>
         </section>
     </div>
 
+    <div class="box-map">
+        <div class="button-box">
+            <a href="https://www.messenger.com/t/557159617777562/" class="message-me" target="_blank">
+                <i></i>
+                Message Me
+            </a>
+            <a href="https://telegram.me/cinemasbot" class="telegram-me" target="_blank">
+                <i>
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 189.473 189.473" style="enable-background:new 0 0 189.473 189.473;" xml:space="preserve"><g><path d="M152.531,179.476c-1.48,0-2.95-0.438-4.211-1.293l-47.641-32.316l-25.552,18.386c-2.004,1.441-4.587,1.804-6.914,0.972c-2.324-0.834-4.089-2.759-4.719-5.146l-12.83-48.622L4.821,93.928c-2.886-1.104-4.8-3.865-4.821-6.955c-0.021-3.09,1.855-5.877,4.727-7.02l174.312-69.36c0.791-0.336,1.628-0.53,2.472-0.582c0.302-0.018,0.605-0.018,0.906-0.001c1.748,0.104,3.465,0.816,4.805,2.13c0.139,0.136,0.271,0.275,0.396,0.42c1.11,1.268,1.72,2.814,1.835,4.389c0.028,0.396,0.026,0.797-0.009,1.198c-0.024,0.286-0.065,0.571-0.123,0.854L159.898,173.38c-0.473,2.48-2.161,4.556-4.493,5.523C154.48,179.287,153.503,179.476,152.531,179.476z M104.862,130.579l42.437,28.785L170.193,39.24l-82.687,79.566l17.156,11.638C104.731,130.487,104.797,130.533,104.862,130.579z M69.535,124.178l5.682,21.53l12.242-8.809l-16.03-10.874C70.684,125.521,70.046,124.893,69.535,124.178z M28.136,86.782l31.478,12.035c2.255,0.862,3.957,2.758,4.573,5.092l3.992,15.129c0.183-1.745,0.974-3.387,2.259-4.624L149.227,38.6L28.136,86.782z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                </i>
+                Telegram Me
+            </a>
+        </div>
+        <iframe width="100%" height="600" frameborder="0" src="https://ruggerinicholas.cartodb.com/viz/4f0753d6-385f-11e6-af43-0e3a376473ab/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+    </div>
 
+    <script src="https://code.jquery.com/jquery-3.0.0.slim.min.js" integrity="sha256-Rf4BadfyCtsvHmO89BUZcbYvNNvZvOT08ALfEzvCsD0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
     <script src="js/scripts.js"></script>
-
-    <script>
-
-    (function(d, s, id){
-       var js, fjs = d.getElementsByTagName(s)[0];
-       if (d.getElementById(id)) { return; }
-       js = d.createElement(s); js.id = id;
-       js.src = "//connect.facebook.net/en_US/sdk.js";
-       fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-
-  </script>
 
 </body>
 </html>
