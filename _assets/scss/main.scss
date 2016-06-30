@@ -71,12 +71,15 @@ body{
 
 .section{
     width: 100%;
-    padding: 5% 15% 10%;
+    padding: 7% 15%;
     margin: 0 auto;
     text-align: left;
     position: relative;
     text-align: center;
     z-index: 10;
+    p{
+        margin-bottom: 7%;
+    }
 }
 
 .cont-canvas{
@@ -184,25 +187,87 @@ h2{
 }
 
 .button-box{
-    top: 0;
-    left: 50%;
     padding: 5%;
-    display: flex;
+    display: inline-flex;
     margin: 0 auto;
-    position: absolute;
     background: rgba(0,0,0,0.06);
     justify-content: space-between;
-    transform: translate(-50%, -50%);
     > a{
         width: 145px;
     }
+}
+
+.box-message{
+    padding: 5%;
+    > div{
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        transform: translateX(-15px);
+        transition: all .4s ease-out;
+        &.is-active{
+            opacity: 1;
+            transform: translateX(0);
+        }
+        &+div{
+            margin-top: 3%;
+        }
+        &.is-first{
+            p{
+                margin-left: 30px;
+                &:after{
+                    content: " ";
+                    right: 100%;
+                    border: solid transparent;
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    pointer-events: none;
+                    border-right-color: lighten(#f9b233, 25);
+                    border-width: 15px;
+                }
+            }
+        }
+    }
+    p{
+        font-size: 16px;
+        margin-left: 70px;
+        color: #030303;
+        padding: 3% 5%;
+        border-radius: 6px;
+        background: lighten(#f9b233, 25);
+        display: inline-block;
+        position: relative;
+    }
+}
+
+.box-message-logo{
+    border-radius: 100%;
+    overflow: hidden;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
 }
 
 .box-map{
     width: 100%;
     min-height: 400px;
     position: relative;
-    background: rgba(0,0,0,0.06);
+    background: #efefef;
+    display: flex;
+    > div{
+        width: 50%;
+        position: relative;
+        iframe{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+    }
 }
 
 .message-me{
