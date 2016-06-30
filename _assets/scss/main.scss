@@ -7,7 +7,23 @@
 }
 
 html, body{
-    height: 100%;
+    font-family: 'Lato', sans-serif;
+}
+
+img{
+    display: block;
+}
+
+p{
+    letter-spacing: 1px;
+    line-height: 1.7;
+    opacity: .9;
+    font-size: 18px;
+}
+
+b{
+    font-weight: bolder;
+    font-size: 1.1em;
 }
 
 body{
@@ -16,7 +32,6 @@ body{
 }
 
 .wrapper{
-    padding: 10% 3%;
     display: flex;
     text-align: center;
     flex-direction: column;
@@ -24,19 +39,56 @@ body{
 }
 
 .header{
+    width: 100%;
+    z-index: 99;
+    height: 80px;
+    padding: 0 3%;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    text-align: left;
     align-items: center;
-    img{
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    a{
+        text-decoration: none;
+        color: #fff;
+        opacity: .7;
+        transition: opacity .2s ease-out;
+        &:hover{
+            opacity: 1;
+        }
+    }
+    h2{
+        margin: 0;
+        font-size: 18px;
+    }
+    svg{
         display: block;
+        fill: #fff;
+        width: 20px;
+        height: 20px;
     }
 }
 
 .section{
-    width: 80%;
-    max-width: 500px;
+    width: 100%;
+    padding: 5% 15% 10%;
     margin: 0 auto;
+    text-align: left;
+    position: relative;
+    text-align: center;
+    z-index: 10;
+}
+
+.cont-canvas{
+    position: relative;
+}
+
+canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    opacity: .4;
 }
 
 @keyframes bounceIn {
@@ -53,6 +105,10 @@ body{
 .box-circle{
     position: relative;
     display: inline-block;
+    h1{
+        position: relative;
+        z-index: 1;
+    }
     &:before, &:after{
         content: "";
         display: block;
@@ -61,10 +117,10 @@ body{
         top: 50%;
         left: 50%;
         position: absolute;
-        border: 1px solid #0084ff;
+        border: 1px solid #fff;
         border-radius: 100%;
         transform: translate(-50%,-50%) scale(.9);
-        z-index: -1;
+        z-index: 0;
     }
     &:after{
         animation: bounceIn 2s infinite;
@@ -85,14 +141,15 @@ h2{
     margin-top: 50px;
     letter-spacing: 2px;
 }
-h3{
-    font-family: 'Lato', sans-serif;
+
+.day-text{
+    font-family: 'Roboto Slab', serif;
+    font-size: 30px;
+    margin: 50px 0;
     letter-spacing: 1px;
-    margin: 10% 0 11%;
     line-height: 1.4;
-    font-size: 22px;
-    opacity: .7;
 }
+
 
 .telegram-me, .message-me{
     color: #fff;
@@ -136,6 +193,9 @@ h3{
     background: rgba(0,0,0,0.06);
     justify-content: space-between;
     transform: translate(-50%, -50%);
+    > a{
+        width: 145px;
+    }
 }
 
 .box-map{
