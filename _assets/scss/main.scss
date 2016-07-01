@@ -208,7 +208,7 @@ h2{
 }
 
 .box-message{
-    padding: 5%;
+    padding: 5% 5% 7% 5%;
     > div{
         display: flex;
         align-items: center;
@@ -271,11 +271,34 @@ h2{
             left: 0;
         }
     }
+    .box-map-footer{
+        background: #2a2a2a;
+        position: absolute;
+        width: 100%;
+        height: 30px;
+        left: 0;
+        bottom: 0;
+    }
 }
 
 .message-me{
     background: #0084ff;
     &:hover{
         background: lighten(#0084ff, 7);
+    }
+}
+
+.footer{
+    width: 100%;
+    background: #2a2a2a;
+    height: 30px;
+    padding: 0 3% 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p, a{
+        font-size: 11px;
+        margin: 0;
+        color: #fff;
     }
 }
