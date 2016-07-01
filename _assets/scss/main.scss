@@ -162,6 +162,26 @@ h2{
     line-height: 1.4;
     font-size: 20px;
     font-weight: 400;
+    background: #fff;
+    color: rgba(0,0,0,0.7);
+    border-radius: 8px;
+    display: inline-block;
+    padding: 20px;
+    text-align: left;
+    &:after{
+        content: " ";
+        right: 100%;
+        border: solid transparent;
+        height: 0;
+        width: 0;
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        pointer-events: none;
+        border-bottom-color: #fff;
+        border-width: 15px;
+    }
     @media screen and (min-width: 769px) {
         font-size: 30px;
     }
@@ -214,7 +234,7 @@ h2{
 .animate{
     opacity: 0;
     transform: translateY(-15px);
-    transition: all .4s ease-out;
+    transition: all .4s ease-out .5s;
     &.is-active{
         opacity: 1;
         transform: translateY(0);
