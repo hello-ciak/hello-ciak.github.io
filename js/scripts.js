@@ -78,6 +78,7 @@
             var pattern = Trianglify({
                 width: $s.innerWidth(),
                 height: $s.innerHeight(),
+                x_colors: "Spectral",
                 cell_size: 40
             });
             $s.append(pattern.canvas())
@@ -92,9 +93,6 @@
             hunt(document.getElementsByClassName('animate'), {
                 in: function() {
                     this.classList.add('is-active');
-                },
-                out: function() {
-                    this.classList.remove('is-active');
                 },
                 persist: true,
                 offset: -50
