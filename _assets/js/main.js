@@ -33,11 +33,7 @@
             $s.append(pattern.canvas())
         }
 
-        function _init() {
-
-            _renderDay()
-            _renderTriangle()
-
+        function _handler() {
             $(window).on('resize', function(){
                 $('.cont-canvas canvas').remove()
                 _renderTriangle()
@@ -53,6 +49,15 @@
                 persist: true,
                 offset: -50
             });
+
+            $(".telegram-me").messengerme();
+        }
+
+        function _init() {
+
+            _renderDay()
+            _renderTriangle()
+            _handler()
 
         }
 

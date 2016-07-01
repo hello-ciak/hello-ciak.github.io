@@ -26,6 +26,11 @@ var gulp        = require('gulp'),
 var prod = false; // var for production mode
 
 
+var scripts = [
+    '_assets/js/messengerme.js',
+    '_assets/js/main.js'
+];
+
 /**
 *
 * Styles
@@ -57,7 +62,7 @@ gulp.task('styles', function() {
 **/
 gulp.task('scripts', function() {
     del.sync('web/js');
-    gulp.src(['_assets/js/mediaresize.js', '_assets/js/preloader.js', '_assets/js/main.js'])
+    gulp.src(scripts)
         .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
         .pipe(concat('scripts.js'))
         .pipe(gulpif(prod, uglify()))
