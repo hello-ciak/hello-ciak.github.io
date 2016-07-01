@@ -152,6 +152,7 @@ h2{
     font-size: 30px;
     margin-top: 50px;
     letter-spacing: 2px;
+    font-weight: 400;
 }
 
 .day-text{
@@ -160,6 +161,7 @@ h2{
     letter-spacing: 1px;
     line-height: 1.4;
     font-size: 20px;
+    font-weight: 400;
     @media screen and (min-width: 769px) {
         font-size: 30px;
     }
@@ -247,6 +249,7 @@ h2{
         }
     }
     p{
+        opacity: .7;
         font-size: 16px;
         margin-left: 70px;
         color: #030303;
