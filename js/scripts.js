@@ -124,10 +124,10 @@
 
         function _init() {
 
-            // _renderDay()
-            // _renderTriangle()
-            // _handler()
-            _renderMap()
+            _renderDay()
+            _renderTriangle()
+            _handler()
+            // _renderMap()
 
         }
 
