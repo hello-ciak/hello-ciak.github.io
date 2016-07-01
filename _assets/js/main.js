@@ -12,7 +12,7 @@
             2: 'It’s only Tuesday?! I feel like a caged lion. What about looking furrrr the nearrrrest theaterrrr to retreat to?',
             3: 'Wednesday, the week is half over and theaterrrrs are full of grrrreat movies rrrready to be seen. Wait for me! The beast is yet to come.',
             4: 'It’s Thirstday!<br>Let’s find out some furrrresh movies<br>to cool this jungle off.',
-            5: '_Upcoming weekend means upcoming movies! ROAAARRR with me, it’s Furrrriday!',
+            5: 'Upcoming weekend means upcoming movies!<br>ROAAARRR with me, it’s Furrrriday!',
             6: 'A movie without starrrrs is like a savannah without me. Saturrrrday is the purrrrfect day for a blockbusterrrr.',
             7: 'This morning in Africa, a gazelle woke up. Sadly, it doesn’t know I love spend my Sunday watching movies, so it runs furrrr nothing.'
         }
@@ -43,7 +43,7 @@
                 _renderTriangle()
             })
 
-            hunt(document.getElementsByClassName('popup'), {
+            hunt(document.getElementsByClassName('animate'), {
                 in: function() {
                     this.classList.add('is-active');
                 },

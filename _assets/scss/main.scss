@@ -197,18 +197,21 @@ h2{
     }
 }
 
+.animate{
+    opacity: 0;
+    transform: translateY(-15px);
+    transition: all .4s ease-out;
+    &.is-active{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .box-message{
     padding: 5%;
     > div{
-        opacity: 0;
         display: flex;
         align-items: center;
-        transform: translateX(-15px);
-        transition: all .4s ease-out;
-        &.is-active{
-            opacity: 1;
-            transform: translateX(0);
-        }
         &+div{
             margin-top: 3%;
         }
@@ -255,7 +258,7 @@ h2{
     width: 100%;
     min-height: 400px;
     position: relative;
-    background: #efefef;
+    background: #f5f5f3;
     display: flex;
     > div{
         width: 50%;
