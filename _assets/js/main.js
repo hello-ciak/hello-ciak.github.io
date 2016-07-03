@@ -14,12 +14,14 @@
             4: 'It’s Thirstday!<br>Let’s find out some furrrresh movies<br>to cool this jungle off.',
             5: 'Upcoming weekend means upcoming movies!<br>ROAAARRR with me, it’s Furrrriday!',
             6: 'A movie without starrrrs is like a savannah without me. Saturrrrday is the purrrrfect day for a blockbusterrrr.',
-            7: 'This morning in Africa, a gazelle woke up.<br>Sadly, it doesn’t know I love spend my Sunday watching movies, so it runs furrrr nothing.'
+            0: 'This morning in Africa, a gazelle woke up.<br>Sadly, it doesn’t know I love spend my Sunday watching movies, so it runs furrrr nothing.'
         }
 
         function _renderDay() {
             var d = new Date(),
                 n = d.getDay();
+
+            console.log('n', n)
             $('.day-text').append(days[n])
         }
 
