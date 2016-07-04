@@ -240,7 +240,7 @@ h2{
     .bubbles-text{
         opacity: 0;
         transition: all .3s ease-out;
-        transition-delay: 3s;
+        transition-delay: 1s;
         z-index: 9;
     }
     &.is-active{
@@ -252,26 +252,26 @@ h2{
         &+.popup{
             transform: translateY(0);
             opacity: 1;
-            transition-delay: 3s;
+            transition-delay: 1s;
             .bubbles-text{
                 opacity: 1;
-                transition-delay: 6s;
+                transition-delay: 3s;
             }
             &+.popup{
                 transform: translateY(0);
                 opacity: 1;
-                transition-delay: 6s;
+                transition-delay: 3s;
                 .bubbles-text{
                     opacity: 1;
-                    transition-delay: 9s;
+                    transition-delay: 5s;
                 }
                 &+.popup{
                     transform: translateY(0);
                     opacity: 1;
-                    transition-delay: 9s;
+                    transition-delay: 5s;
                     .bubbles-text{
                         opacity: 1;
-                        transition-delay: 11s;
+                        transition-delay: 7s;
                     }
                 }
             }
