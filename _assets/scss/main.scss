@@ -236,22 +236,22 @@ h2{
 .popup{
     opacity: 0;
     transform: translateY(-15px);
-    transition: all .4s ease-out 1s;
+    transition: all .4s ease-out;
     &.is-active{
         opacity: 1;
         transform: translateY(0);
         &+.popup{
             transform: translateY(0);
             opacity: 1;
-            transition-delay: 2.5s;
+            transition-delay: 1.5s;
             &+.popup{
                 transform: translateY(0);
                 opacity: 1;
-                transition-delay: 4s;
+                transition-delay: 3s;
                 &+.popup{
                     transform: translateY(0);
                     opacity: 1;
-                    transition-delay: 5s;
+                    transition-delay: 4s;
                 }
             }
         }
