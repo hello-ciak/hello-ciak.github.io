@@ -133,7 +133,8 @@
                 in: function() {
                     this.classList.add('is-active');
                 },
-                persist: true
+                persist: true,
+                offset: -50
             });
 
             $(".telegram-me").messengerme();
