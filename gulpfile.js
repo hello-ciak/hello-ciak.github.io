@@ -27,6 +27,7 @@ var prod = false; // var for production mode
 
 
 var scripts = [
+    '_assets/js/preloader.js',
     '_assets/js/messengerme.js',
     '_assets/js/main.js'
 ];

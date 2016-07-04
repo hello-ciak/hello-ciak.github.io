@@ -20,8 +20,6 @@
         function _renderDay() {
             var d = new Date(),
                 n = d.getDay();
-
-            console.log('n', n)
             $('.day-text').append(days[n])
         }
 
@@ -46,32 +44,10 @@
                 in: function() {
                     this.classList.add('is-active');
                 },
-                persist: true,
-                offset: -50
+                persist: true
             });
 
             $(".telegram-me").messengerme();
-        }
-
-        function _renderMap() {
-            cartodb.createVis('map', 'https://ruggerinicholas.cartodb.com/api/v2/viz/4f0753d6-385f-11e6-af43-0e3a376473ab/viz.json', {
-                zoom: 2
-            })
-            .done(function(vis, layers) {
-                // layer 0 is the base layer, layer 1 is cartodb layer
-                // when setInteraction is disabled featureOver is triggered
-                layers[1].setInteraction(false);
-
-                // you can get the native map to work with it
-                var map = vis.getNativeMap();
-
-                // now, perform any operations you need, e.g. assuming map is a L.Map object:
-                // map.setZoom(3);
-                // map.panTo([50.5, 30.5]);
-            })
-            .error(function(err) {
-                console.log(err);
-            });
         }
 
         function _init() {
@@ -79,7 +55,6 @@
             _renderDay()
             _renderTriangle()
             _handler()
-            // _renderMap()
 
         }
 
@@ -88,6 +63,17 @@
         };
 
     }());
+
+
+    $(window).on('load', function () {
+
+        PRELOADER.remove(function () {
+          setTimeout(function () {
+            MAIN.init();
+          }, 0);
+        });
+
+    });
 
     MAIN.init();
 
