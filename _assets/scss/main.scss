@@ -237,21 +237,45 @@ h2{
     opacity: 0;
     transform: translateY(-15px);
     transition: all .4s ease-out;
+    span{
+        display: block;
+    }
+    .bubbles-text{
+        opacity: 0;
+        transition: all .3s ease-out;
+        transition-delay: 3s;
+        z-index: 9;
+    }
     &.is-active{
         opacity: 1;
         transform: translateY(0);
+        .bubbles-text{
+            opacity: 1;
+        }
         &+.popup{
             transform: translateY(0);
             opacity: 1;
-            transition-delay: 1.5s;
+            transition-delay: 3s;
+            .bubbles-text{
+                opacity: 1;
+                transition-delay: 6s;
+            }
             &+.popup{
                 transform: translateY(0);
                 opacity: 1;
-                transition-delay: 3s;
+                transition-delay: 6s;
+                .bubbles-text{
+                    opacity: 1;
+                    transition-delay: 9s;
+                }
                 &+.popup{
                     transform: translateY(0);
                     opacity: 1;
-                    transition-delay: 4s;
+                    transition-delay: 9s;
+                    .bubbles-text{
+                        opacity: 1;
+                        transition-delay: 11s;
+                    }
                 }
             }
         }
@@ -259,7 +283,7 @@ h2{
 }
 
 .box-message{
-    padding: 80px 5% 100px 5%;
+    padding: 100px 5% 130px 5%;
     > div{
         display: flex;
         align-items: center;
@@ -280,7 +304,22 @@ h2{
                     transform: translateY(-50%);
                     pointer-events: none;
                     border-right-color: lighten(#f9b233, 25);
-                    border-width: 15px;
+                    border-width: 10px;
+                }
+            }
+            .bubbles{
+                &:after{
+                    content: " ";
+                    right: 100%;
+                    border: solid transparent;
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    pointer-events: none;
+                    border-right-color: lighten(#f9b233, 25);
+                    border-width: 10px;
                 }
             }
         }
@@ -295,6 +334,41 @@ h2{
         background: lighten(#f9b233, 25);
         display: inline-block;
         position: relative;
+        transition: all .3s ease-out;
+    }
+}
+
+.bubbles{
+    opacity: .7;
+    font-size: 16px;
+    color: #030303;
+    padding: 8px 18px;
+    border-radius: 6px;
+    background: lighten(#f9b233, 25);
+    display: inline-block;
+    transition: all .3s ease-out;
+    position: absolute;
+    width: 81px;
+    height: 35px;
+    margin: 0;
+    left: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    i{
+        width: 11px;
+        height: 11px;
+        display: inline-block;
+        border-radius: 11px;
+        background: #000;
+        opacity: .5;
+        animation: writing 1s infinite .5s;
+        &+i{
+            margin-left: 6px;
+            animation: writing 1s infinite .7s;
+            &+i{
+                animation: writing 1s infinite .9s;
+            }
+        }
     }
 }
 
@@ -404,4 +478,19 @@ h2{
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+@keyframes writing {
+  0% {
+    transform: scale(.9);
+    opacity: .5;
+  }
+  50% {
+    transform: scale(1);
+    opacity: .7;
+  }
+  100% {
+    transform: scale(.9);
+    opacity: .5;
+  }
 }
