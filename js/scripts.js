@@ -97,11 +97,11 @@
     var MAIN = (function() {
 
         var days = {
-            1: 'I hate Monday here in the mighty jungle, I think I’m gonna sleep tonight... in furrrront of a good movie.<br>Any suggestions?',
+            1: 'I hate Monday here in the mighty jungle, I think I’m gonna sleep tonight... in furrrront of a good movie. Any suggestions?',
             2: 'It’s only Tuesday?!<br>I feel like a caged lion.<br>What about looking furrrr<br>the nearrrrest theaterrrr to retreat to?',
             3: 'Wednesday, the week is half over and theaterrrrs are full of grrrreat movies rrrready to be seen.<br>Wait for me! The beast is yet to come.',
             4: 'It’s Thirstday!<br>Let’s find out some furrrresh movies<br>to cool this jungle off.',
-            5: 'Upcoming weekend means upcoming movies!<br>ROAAARRR with me, it’s Furrrriday!',
+            5: 'Upcoming weekend means upcoming movies! ROAAARRR with me, it’s Furrrriday!',
             6: 'A movie without starrrrs is like a savannah without me. Saturrrrday is the purrrrfect day for a blockbusterrrr.',
             0: 'This morning in Africa, a gazelle woke up.<br>Sadly, it doesn’t know I love spend my Sunday watching movies, so it runs furrrr nothing.'
         }
