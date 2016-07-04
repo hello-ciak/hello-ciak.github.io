@@ -1,0 +1,33 @@
+.header{
+    width: 100%;
+    z-index: 99;
+    height: 80px;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 0 20px;
+    @media screen and (min-width: 769px) {
+        padding: 0 3%;
+    }
+    a{
+        text-decoration: none;
+        color: #fff;
+        opacity: .7;
+        transition: opacity .2s ease-out;
+        &:hover{
+            opacity: 1;
+        }
+    }
+    h2{
+        margin: 0;
+        font-size: 18px;
+    }
+    svg{
+        display: block;
+        fill: #fff;
+        width: 20px;
+        height: 20px;
+    }
+}

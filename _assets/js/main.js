@@ -46,12 +46,48 @@
                 _renderTriangle()
             })
 
-            hunt(document.getElementsByClassName('animate'), {
+            hunt($('.popup.is-first'), {
                 in: function() {
-                    this.classList.add('is-active');
+
+                    var $p0 = $(".popup:eq(0)"),
+                        $p1 = $(".popup:eq(1)"),
+                        $p2 = $(".popup:eq(2)"),
+                        $p3 = $(".popup:eq(3)");
+
+                    setTimeout(function(){
+                        $p0.find('.bubbles')
+                           .addClass('is-active')
+                    }, 100)
+
+                    setTimeout(function(){
+                        $p0.find('.bubbles-text')
+                           .addClass('is-active')
+                        $p1.find('.bubbles')
+                           .addClass('is-active')
+                    }, 1500)
+
+                    setTimeout(function(){
+                        $p1.find('.bubbles-text')
+                           .addClass('is-active')
+                        $p2.find('.bubbles')
+                           .addClass('is-active')
+                    }, 3500)
+
+                    setTimeout(function(){
+                        $p2.find('.bubbles-text')
+                           .addClass('is-active')
+                        $p3.find('.bubbles')
+                           .addClass('is-active')
+                    }, 5000)
+
+                    setTimeout(function(){
+                        $p3.find('.bubbles-text')
+                           .addClass('is-active')
+                    }, 6000)
+
                 },
                 persist: true,
-                offset: -50
+                offset: -100
             });
 
             $(".telegram-me").messengerme();
@@ -77,7 +113,7 @@
         PRELOADER.remove(function () {
           setTimeout(function () {
             MAIN.init();
-          }, 0);
+          }, 100);
         });
 
     });
