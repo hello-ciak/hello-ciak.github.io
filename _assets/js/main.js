@@ -20,7 +20,6 @@
 
             var d = new Date(),
                 n = d.getDay();
-
             $('.day-text').append(days[n])
 
         }
@@ -97,11 +96,9 @@
         }
 
         function _init() {
-
             _renderDay()
             _renderTriangle()
             _handler()
-
         }
 
         return {
