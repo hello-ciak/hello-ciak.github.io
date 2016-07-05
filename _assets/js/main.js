@@ -53,10 +53,10 @@
                         $p2 = $(".popup:eq(2)"),
                         $p3 = $(".popup:eq(3)");
 
-                    var l0 = $p0.find('.bubbles-text').text().length*15,
-                        l1 = $p1.find('.bubbles-text').text().length*15,
-                        l2 = $p2.find('.bubbles-text').text().length*15,
-                        l3 = $p3.find('.bubbles-text').text().length*15;
+                    var l0 = $p0.find('.bubbles-text').text().length*30,
+                        l1 = $p1.find('.bubbles-text').text().length*30,
+                        l2 = $p2.find('.bubbles-text').text().length*30,
+                        l3 = $p3.find('.bubbles-text').text().length*30;
 
                     $p0.find('.bubbles')
                        .addClass('is-active')
