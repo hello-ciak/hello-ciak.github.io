@@ -54,40 +54,43 @@
                         $p2 = $(".popup:eq(2)"),
                         $p3 = $(".popup:eq(3)");
 
-                    setTimeout(function(){
-                        $p0.find('.bubbles')
-                           .addClass('is-active')
-                    }, 100)
+                    var l0 = $p0.find('.bubbles-text').text().length*15,
+                        l1 = $p1.find('.bubbles-text').text().length*15,
+                        l2 = $p2.find('.bubbles-text').text().length*15,
+                        l3 = $p3.find('.bubbles-text').text().length*15;
+
+                    $p0.find('.bubbles')
+                       .addClass('is-active')
 
                     setTimeout(function(){
                         $p0.find('.bubbles-text')
                            .addClass('is-active')
                         $p1.find('.bubbles')
                            .addClass('is-active')
-                    }, 1500)
+                    }, l0)
 
                     setTimeout(function(){
                         $p1.find('.bubbles-text')
                            .addClass('is-active')
                         $p2.find('.bubbles')
                            .addClass('is-active')
-                    }, 3500)
+                    }, l0 + l1)
 
                     setTimeout(function(){
                         $p2.find('.bubbles-text')
                            .addClass('is-active')
                         $p3.find('.bubbles')
                            .addClass('is-active')
-                    }, 5000)
+                    }, l0 + l1 + l2)
 
                     setTimeout(function(){
                         $p3.find('.bubbles-text')
                            .addClass('is-active')
-                    }, 6000)
+                    }, l0 + l1 + l2 + l3)
 
                 },
                 persist: true,
-                offset: -100
+                offset: -200
             });
 
             $(".telegram-me").messengerme();
