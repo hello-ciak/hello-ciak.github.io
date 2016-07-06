@@ -97,6 +97,8 @@ gulp.task('html', function() {
     gulp.src('_views/**/*.html')
         .pipe(gulpif(prod, htmlmin({collapseWhitespace: true})))
         .pipe(gulp.dest('web'))
+    gulp.src('_assets/favicon/*.*')
+        .pipe(gulp.dest('web/favicon'))
 });
 
 
