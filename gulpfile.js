@@ -47,7 +47,7 @@ gulp.task('styles', function() {
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: prod ? 'compressed' : 'expanded'}))
         .pipe(prefix())
-        .pipe(sourcemaps.write())
+        .pipe(gulpif(!prod, sourcemaps.write()))
         .pipe(gulp.dest('web/css'))
         .pipe(browserSync.stream());
 });
